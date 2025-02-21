@@ -34,7 +34,19 @@ const userSchema = new mongoose.Schema({
 
 // Method to generate an authentication token for a user
 userSchema.methods.generateAuthToken = function () {
-  const token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET); // Sign the token using the user's ID and a secret key
+  /**
+   * Generates a JSON Web Token (JWT) for the user.
+   *
+   * @constant {string} token - The signed JWT.
+   * @property {Object} payload - The payload of the token.
+   * @property {string} payload._id - The user's ID.
+   * @property {string} secret - The secret key used to sign the token.
+   * @property {Object} options - Options for the token.
+   * @property {string} options.expiresIn - The expiration time of the token, set to "24h".
+   */
+  const token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET, {
+    expiresIn: "24h",
+  }); // Sign the token using the user's ID and a secret key
   return token;
 };
 
