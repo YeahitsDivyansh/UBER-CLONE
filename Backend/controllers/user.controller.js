@@ -2,8 +2,7 @@
 const userModel = require("../models/user.model"); // Import the user model
 const userService = require("../services/user.service"); // Import the user service for user-related operations
 const { validationResult } = require("express-validator"); // Import express-validator for input validation
-const blackListTokeModel = require("../models/blackListToken.model"); // Import the blacklist token model to store logged-out tokens
-
+const blackListTokeModel = require("../models/blacklistToken.model"); // Import the blacklist token model
 /**
  * @desc   Registers a new user
  * @route  POST /api/users/register
