@@ -12,7 +12,7 @@ const UserSignup = () => {
     e.preventDefault();
     // Add your code here
     setUserData({
-      username: {
+      fullName: {
         firstName: firstName,
         lastName: lastName,
       },
