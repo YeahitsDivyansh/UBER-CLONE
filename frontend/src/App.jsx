@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import UserLogin from "./pages/UserLogin";
 import UserSignup from "./pages/UserSignup";
 import CaptainSignup from "./pages/CaptainSignup";
-import Captainlogin from "./pages/CaptainLogin";
+import Captainlogin from "./pages/Captainlogin";
 
 const App = () => {
   return (

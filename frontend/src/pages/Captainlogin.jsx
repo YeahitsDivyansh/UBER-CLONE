@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 const Captainlogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userData, setUserData] = useState({});
+  const [captainData, setCaptainData] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setUserData({
+    setCaptainData({
       email: email,
-      password: password,
+      password,
     });
-    console.log(userData);
     setEmail("");
     setPassword("");
   };
@@ -20,7 +19,7 @@ const Captainlogin = () => {
     <div className="p-7 h-screen flex flex-col justify-between">
       <div>
         <img
-          className="w-16 mb-10"
+          className="w-20 mb-3"
           src="https://www.svgrepo.com/show/505031/uber-driver.svg"
         />
         <form
@@ -56,7 +55,7 @@ const Captainlogin = () => {
         </form>
         <p className="text-center">
           Join a fleet ?
-          <Link to="/signup" className="text-blue-600">
+          <Link to="/captain-signup" className="text-blue-600">
             Register as a Captain
           </Link>
         </p>
@@ -64,7 +63,7 @@ const Captainlogin = () => {
 
       <div>
         <Link
-          to="/captain-login"
+          to="/login"
           className="bg-[#d5622d] flex items-center justify-center text-white font-semibold mb-5 px-4 py-2 w-full text-lg placeholder:text-base"
         >
           Sign in as User
