@@ -32,8 +32,8 @@ const UserContext = ({ children }) => {
   });
 
   return (
-    <div value={[user, setUser]}>
-      <UserDataContext.Provider>
+    <div>
+      <UserDataContext.Provider value={{ user, setUser }}>
         {/* This is the actual context provider but is missing the `value` prop. */}
         {/* It should wrap `children` so that any component inside it can access the user data via `UserDataContext`. */}
         {children}
